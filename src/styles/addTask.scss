@@ -3,18 +3,24 @@
     justify-content: center;
     align-items: center;
     margin-top: 40px;
+    caret-color: transparent;
+    flex-direction: column;
+
+
 
     hr {
-        border: 1px solid #FF8303;
+        border: 1.8px solid #FF8303;
         border-radius: 8px;
         margin: 10px;
+        width: 57px;
     }
 
     p {
         font-family: 'Inter';
         color: #FFFFFF;
         font-size: 24px;
-  
+        line-height: 29.05px;
+        
     }
 }
 

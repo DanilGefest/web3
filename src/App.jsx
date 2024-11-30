@@ -4,15 +4,18 @@ import { Provider } from "react-redux";
 import store from "./scripts/Store";
 import AddTask from "./components/AddTask";
 function App() {
+ const [alert,setAlert] = useState()
   return (
     <>
       <Provider store={store}>
+        {alert}
         <AddTask />
-        <Tasklist />
+        <Tasklist setAlert={setAlert} />
       </Provider>
     </>
   );
 }
+
 
 export default App;
 /* <div className = "form-container">
