@@ -3,10 +3,18 @@ import Tasklist from "./components/Tasklist.jSX";
 import { Provider } from "react-redux";
 import store from "./scripts/Store";
 import AddTask from "./components/AddTask";
+import { Helmet } from 'react-helmet';
+import favcon from "../public/favcon.ico";
+
 function App() {
+  
+
  const [alert,setAlert] = useState()
   return (
     <>
+      <Helmet>  <link rel="icon" type="image/x-icon" href = {favcon} /> 
+      document.title = 'Todo react'</Helmet>
+      
       <Provider store={store}>
         {alert}
         <AddTask />
