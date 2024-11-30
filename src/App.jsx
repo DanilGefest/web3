@@ -1,11 +1,21 @@
-import { useState } from 'react'
-
+import { useState } from "react";
+import Tasklist from "./components/Tasklist.jSX";
+import { Provider } from "react-redux";
+import store from "./scripts/Store";
+import AddTask from "./components/AddTask";
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-<>
-      <div className = "form-container">
+    <>
+      <Provider store={store}>
+        <AddTask />
+        <Tasklist />
+      </Provider>
+    </>
+  );
+}
+
+export default App;
+/* <div className = "form-container">
       <div className="form-inputs"> 
             <input id="input-title" type="text" placeholder="Title..."> </input>
             <input id="input-about" type="text" placeholder="About..."></input>
@@ -14,9 +24,4 @@ function App() {
             <button id="add-task-button"> <img src="src/assets/images/plus-button.svg" alt="">  
             </img> </button>
         </div>
-      </div>
-    </>
-  )
-}
-
-export default App
+      </div> */
