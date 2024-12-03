@@ -28,7 +28,7 @@ export function getTaskList() {
 }
 
 export function moveTask(dragIndex, hoverIndex) {
-  const TaskStorage = getTaskStorage();
+  const TaskStorage = getTaskList();
   const draggedTask = TaskStorage[dragIndex];
   TaskStorage.splice(dragIndex, 1);
   TaskStorage.splice(hoverIndex, 0, draggedTask);
